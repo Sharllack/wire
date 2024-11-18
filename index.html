@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>Document</title>
     <style>
       * {
@@ -57,45 +61,47 @@
         margin-top: 10px;
       }
 
-      section {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 10px;
-      }
-
-      .estudo {
+      .swiper-slide {
         cursor: pointer;
-        flex: calc(50% - 10px);
         border: 1px black solid;
-        text-align: center;
         border-radius: 2px;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.144);
-        transition: 0.3s;
         color: black;
         text-decoration: none;
         font-family: Arial, Helvetica, sans-serif;
+        height: calc(100vh - 108px);
       }
 
-      .estudo:hover {
-        transform: scale(1.02);
-        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.144);
-      }
-
-      .estudo:active {
-        transform: scale(0.98);
-      }
-
-      .estudo img {
-        width: 100px;
+      .swiper-slide img {
+        height: 130px;
+        display: block;
+        margin: auto;
       }
 
       .conteudo {
         background-color: rgb(226, 226, 226);
-        height: 40px;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .conteudo h2 {
+        margin: 2px;
+        text-align: center;
+      }
+
+      .conteudo p {
+        text-indent: 10px;
+      }
+
+      .conteudo .lorem {
+        text-indent: 25px;
+      }
+
+      hr {
+        margin: 5px auto;
+        width: 100%;
+        color: lightgrey;
       }
 
       ::-webkit-scrollbar {
@@ -117,55 +123,133 @@
       </div>
     </header>
     <h1 id="titu">Selecione o estudo</h1>
-    <section>
-      <a href="./sujeito.html" class="estudo">
-        <div class="imagem">
-          <img src="./imagem/logo.png" alt="" />
+    <section class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <a href="./sujeito.html" class="swiper-slide">
+          <div class="imagem">
+            <img src="./imagem/logo.png" alt="" />
+          </div>
+          <div class="conteudo">
+            <h2>Nome do Estudo</h2>
+            <hr />
+            <p><b>Duração:</b> 2 horas</p>
+            <hr />
+            <p><b>Objetivo:</b></p>
+            <p class="lorem">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              magnam iste officiis quam voluptatibus autem quasi nam eaque unde
+              voluptatum, porro deserunt culpa aliquid eum ipsa maxime molestiae
+              neque minus?
+            </p>
+          </div>
+        </a>
+        <div class="swiper-slide">
+          <div class="imagem">
+            <img src="./imagem/logo.png" alt="" />
+          </div>
+          <div class="conteudo">
+            <h2>Nome do Estudo</h2>
+            <hr />
+            <p><b>Duração:</b> 2 horas</p>
+            <hr />
+            <p><b>Objetivo:</b></p>
+            <p class="lorem">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              magnam iste officiis quam voluptatibus autem quasi nam eaque unde
+              voluptatum, porro deserunt culpa aliquid eum ipsa maxime molestiae
+              neque minus?
+            </p>
+          </div>
         </div>
-        <div class="conteudo">
-          <p>Estudo</p>
+        <div class="swiper-slide">
+          <div class="imagem">
+            <img src="./imagem/logo.png" alt="" />
+          </div>
+          <div class="conteudo">
+            <h2>Nome do Estudo</h2>
+            <hr />
+            <p><b>Duração:</b> 2 horas</p>
+            <hr />
+            <p><b>Objetivo:</b></p>
+            <p class="lorem">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              magnam iste officiis quam voluptatibus autem quasi nam eaque unde
+              voluptatum, porro deserunt culpa aliquid eum ipsa maxime molestiae
+              neque minus?
+            </p>
+          </div>
         </div>
-      </a>
-      <div class="estudo">
-        <div class="imagem">
-          <img src="./imagem/logo.png" alt="" />
+        <div class="swiper-slide">
+          <div class="imagem">
+            <img src="./imagem/logo.png" alt="" />
+          </div>
+          <div class="conteudo">
+            <h2>Nome do Estudo</h2>
+            <hr />
+            <p><b>Duração:</b> 2 horas</p>
+            <hr />
+            <p><b>Objetivo:</b></p>
+            <p class="lorem">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              magnam iste officiis quam voluptatibus autem quasi nam eaque unde
+              voluptatum, porro deserunt culpa aliquid eum ipsa maxime molestiae
+              neque minus?
+            </p>
+          </div>
         </div>
-        <div class="conteudo">
-          <p>Estudo</p>
+        <div class="swiper-slide">
+          <div class="imagem">
+            <img src="./imagem/logo.png" alt="" />
+          </div>
+          <div class="conteudo">
+            <h2>Nome do Estudo</h2>
+            <hr />
+            <p><b>Duração:</b> 2 horas</p>
+            <hr />
+            <p><b>Objetivo:</b></p>
+            <p class="lorem">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              magnam iste officiis quam voluptatibus autem quasi nam eaque unde
+              voluptatum, porro deserunt culpa aliquid eum ipsa maxime molestiae
+              neque minus?
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="imagem">
+            <img src="./imagem/logo.png" alt="" />
+          </div>
+          <div class="conteudo">
+            <h2>Nome do Estudo</h2>
+            <hr />
+            <p><b>Duração:</b> 2 horas</p>
+            <hr />
+            <p><b>Objetivo:</b></p>
+            <p class="lorem">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              magnam iste officiis quam voluptatibus autem quasi nam eaque unde
+              voluptatum, porro deserunt culpa aliquid eum ipsa maxime molestiae
+              neque minus?
+            </p>
+          </div>
         </div>
       </div>
-      <div class="estudo">
-        <div class="imagem">
-          <img src="./imagem/logo.png" alt="" />
-        </div>
-        <div class="conteudo">
-          <p>Estudo</p>
-        </div>
-      </div>
-      <div class="estudo">
-        <div class="imagem">
-          <img src="./imagem/logo.png" alt="" />
-        </div>
-        <div class="conteudo">
-          <p>Estudo</p>
-        </div>
-      </div>
-      <div class="estudo">
-        <div class="imagem">
-          <img src="./imagem/logo.png" alt="" />
-        </div>
-        <div class="conteudo">
-          <p>Estudo</p>
-        </div>
-      </div>
-      <div class="estudo">
-        <div class="imagem">
-          <img src="./imagem/logo.png" alt="" />
-        </div>
-        <div class="conteudo">
-          <p>Estudo</p>
-        </div>
-      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "progressbar",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
